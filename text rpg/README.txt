@@ -1,0 +1,1 @@
+To play the game, run the main.py file in a python terminal.
