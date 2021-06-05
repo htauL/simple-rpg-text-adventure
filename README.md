@@ -1,6 +1,7 @@
 # simple-rpg-text-adventure
-I'm making a text rpg just for fun.
+This is a simple command line game that I'm making just for fun
 
-In the moment I am making a battle system, that is incomplete.
+For now, only the battle and level up systems are done.
 
-To play the game you need to run the main.py file in a python terminal.
+I'm working in the inventory and items system.
+
