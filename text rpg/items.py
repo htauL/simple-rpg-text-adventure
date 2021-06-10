@@ -13,6 +13,7 @@ wooden_sword = {
     'NAME': 'Wooden Sword',
     'BPRICE': 20,
     'SPRICE': 10,
+    'ATK': 5,
     'DESC': 'Deals +5 damage.'
 }
 
@@ -20,6 +21,7 @@ copper_sword = {
     'NAME': 'Copper Sword',
     'BPRICE': 50,
     'SPRICE': 25,
+    'ATK': 15,
     'DESC': 'Deals +15 damage.'
 }
 
@@ -29,6 +31,7 @@ lather_breastplate = {
     'NAME': 'Leather Breastplate',
     'BPRICE': 75,
     'SPRICE': 35,
-    'DESC': 'Gives +10 defense.'
+    'DEF': 5,
+    'DESC': 'Gives +5 defense.'
 }
 

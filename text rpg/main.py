@@ -66,6 +66,16 @@ def LvlCheck(player):
 	if player['XP'] >= math.pow(player['LVL'], 1.12) * 100:
 		LevelUp(players.player, 1)
 
+#----------changing equipment---------
+def ChangeSword():
+    if players.equipped['sword'] == i.wooden_sword:
+        players.equipped['sword'] = i.copper_sword
+        players.DMG = players.player['ATK'] + players.equipped['sword']['ATK']
+    elif players.equipped['sword'] == i.copper_sword:
+        players.equipped['sword'] = i.wooden_sword
+        players.DMG = players.player['ATK'] + players.equipped['sword']['ATK']
+    
+
 #-------------store------------------
 def EnterStore(player):
     print('You entered the store \n')
@@ -131,19 +141,20 @@ def EnterStore(player):
 
 
 while True:
-	LvlCheck(players.player)
-	if players.player['HP'] > 0:
-		print('You are in the city. What to do?')
-		time.sleep(.5)
-		choiceA = input('[A]dventure\n[S]tore\n\n-').upper().strip()
-		if choiceA == 'A':
-			time.sleep(.8)
-			print('You went on an adventure! \n')
-			EnterCombat(players.player, enemies.slime)
-		elif choiceA == 'S':
-			EnterStore(players.player)
-		else:
-			print('Choose a valid option!\n')
-	if players.player['HP'] <= 0:
-		print('Game over')
-		break
+    LvlCheck(players.player)
+    if players.player['HP'] > 0:
+        print('You are in the city. What to do?')
+        print(players.DMG)
+        time.sleep(.5)
+        choiceA = input('[A]dventure\n[S]tore\n\n-').upper().strip()
+        if choiceA == 'A':
+            time.sleep(.8)
+            print('You went on an adventure! \n')
+            EnterCombat(players.player, enemies.slime)
+        elif choiceA == 'S':
+            EnterStore(players.player)
+        else:
+            print('Choose a valid option!\n')
+    if players.player['HP'] <= 0:
+        print('Game over')
+        break
